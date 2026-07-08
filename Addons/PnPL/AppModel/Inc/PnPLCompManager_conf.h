@@ -1,0 +1,52 @@
+/**
+  ******************************************************************************
+  * @file    PnPLCompManager_conf.h
+  * @author  SRA
+  * @brief   PnPL Components Manager configuration template file.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  *
+  ******************************************************************************
+  */
+
+/**
+  ******************************************************************************
+  * This file has been auto generated from the following Device Template Model:
+  * dtmi:appconfig:steval_mkboxpro:STAIOTCRAFT_SDATALOG;1
+  *
+  * Created by: DTDL2PnPL_cGen version 3.1.0-alpha.2
+  *
+  * WARNING! All changes made to this file will be lost if this is regenerated
+  ******************************************************************************
+  */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __PNPL_COMP_MANAGER_CONF_H__
+#define __PNPL_COMP_MANAGER_CONF_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+#include "math.h"
+#include "stm32u5xx_hal.h"
+      
+#define BOARD_ID_A    0x0D
+#define FW_ID_A       0x15
+#define PROTOCOL_ID   0x01
+
+#define BOARD_ID_C    0x13
+#define FW_ID_C       0x08
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __PNPL_COMP_MANAGER_CONF_H__*/

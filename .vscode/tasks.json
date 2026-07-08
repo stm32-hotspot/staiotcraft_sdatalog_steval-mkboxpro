@@ -1,0 +1,113 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "CMake: Configure Debug",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--preset",
+				"Debug"
+			],
+			"group": "build"
+		},
+		{
+			"label": "CMake: Build Debug",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"Debug"
+			],
+			"group": "build",
+			"dependsOn": "CMake: Configure Debug",
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "CMake: Configure ReleaseSize",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--preset",
+				"ReleaseSize"
+			],
+			"group": "build"
+		},
+		{
+			"label": "CMake: Build ReleaseSize",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"ReleaseSize"
+			],
+			"group": "build",
+			"dependsOn": "CMake: Configure ReleaseSize",
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "CMake: Configure ReleaseSpeed",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--preset",
+				"ReleaseSpeed"
+			],
+			"group": "build"
+		},
+		{
+			"label": "CMake: Build ReleaseSpeed",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"ReleaseSpeed"
+			],
+			"group": "build",
+			"dependsOn": "CMake: Configure ReleaseSpeed",
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "Compile Debug preset",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"Debug"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Compile ReleaseSize preset",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"ReleaseSize"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Compile ReleaseSpeed preset",
+			"type": "shell",
+			"command": "cmake",
+			"args": [
+				"--build",
+				"--preset",
+				"ReleaseSpeed"
+			],
+			"group": "build"
+		}
+	]
+}

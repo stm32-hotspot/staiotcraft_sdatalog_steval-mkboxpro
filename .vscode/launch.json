@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Debug (ST-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/STAIOTCRAFT_SDATALOG_STEVAL-MKBOXPRO.elf",
+            "servertype": "stlink",
+            "device": "STM32U585xx",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "CMake: Build Debug"
+        },
+        {
+            "name": "Debug ReleaseSize (ST-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/ReleaseSize/STAIOTCRAFT_SDATALOG_STEVAL-MKBOXPRO.elf",
+            "servertype": "stlink",
+            "device": "STM32U585xx",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "CMake: Build ReleaseSize"
+        },
+        {
+            "name": "Debug ReleaseSpeed (ST-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/ReleaseSpeed/STAIOTCRAFT_SDATALOG_STEVAL-MKBOXPRO.elf",
+            "servertype": "stlink",
+            "device": "STM32U585xx",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "CMake: Build ReleaseSpeed"
+        }
+    ]
+}
