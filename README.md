@@ -1,22 +1,20 @@
-# STEVAL-MKBOXPRO Serial Data Log and Inference Firmware
+# STEVAL-MKBOXPRO Serial Datalog Firmware
 
 ## Introduction
 
-This repository contains the STAIOTCRAFT Serial Data Log and Inference firmware project for the STEVAL-MKBOXPRO board. The project is self-contained and should be opened directly from this firmware folder in Visual Studio Code.
+This repository contains the Serial Datalog firmware project for the [STEVAL-MKBOXPRO](https://www.st.com/en/evaluation-tools/steval-mkboxpro.html) board, compatible with the [ST AIoT Craft](https://staiotcraft.st.com/) online platform, which is part of the [ST Edge AI Suite](https://www.st.com/content/st_com/en/st-edge-ai-suite.html).
 
-## Board Image (Official Source)
-
-![STEVAL-MKBOXPRO (SensorTile.box PRO)](https://www.st.com/bin/ecommerce/api/image.PF272366.en.feature-description-include-personalized-no-cpn-medium.jpg)
-
-Source: [STEVAL-MKBOXPRO product page](https://www.st.com/en/evaluation-tools/steval-mkboxpro.html)
+The project is self-contained and should be opened directly from this firmware folder in Visual Studio Code.
 
 ## Features
 
-- Serial Data Logging firmware project for STEVAL-MKBOXPRO
-- Inference firmware exploiting ST LSM6DSV16X sensor Machine Learnig Core
+- Datalogging over serial connectivity of the ST LSM6DSV16X sensor that comes with the STEVAL-MKBOXPRO board
+- Validation of decision tree models on the ST LSM6DSV16X's Machine Learning Core (MLC) intelligent sensor
+- Custom ASPEP/SSTL and PnPL protocols for data transmission and firmware control over serial connectivity
 - Self-contained CMake project with Debug and Release presets
-- VS Code configuration for configure, build, and debug
+- VS Code configuration for configure, build, and debug operations
 - ST-LINK debug workflow through Cortex-Debug
+- The firmware can be controlled by the [ST AIoT Craft](https://staiotcraft.st.com/) online platform
 
 ## Repository Content
 
@@ -103,14 +101,24 @@ Build output directory:
 - If the executable is missing, configure and build the project first.
 - If ST-LINK is not detected, verify USB connection, board power, and installed drivers.
 
-## Notes
+## ST AIoT Craft compatible firmware
 
-- After cloning, configure and build locally to regenerate the `build` folder.
-- The firmware can be controlled by the STAIOTCRAFT GUI via custom ASPE/SSTL/PnPL protocol.
-- The other companion firmwares available within the STAIOCRAFT offer are: 
-  - STAIOTCRAFT_SDATALOG_STEVAL-MKBOXPRO
-  - STAIOTCRAFT_AI_Inertial_STEVAL-STWINKT1B
-  - STAIOTCRAFT_AI_Inertial_STEVAL-STWINBX1
-  - STAIOTCRAFT_AI_Inertial_STEVAL-MKBOXPRO
-  - STAIOTCRAFT_AI_SSM_STEVAL-MKBOXPRO
-  - STAIOTCRAFT_SDATALOG_RUST_STEVAL-MKBOXPRO
+The full list of companion firmware compatible with the [ST AIoT Craft](https://staiotcraft.st.com/) online platform is reported here below.
+
+- Datalogging firmware over USB/serial connectivity
+  - [STAIOTCRAFT_SDATALOG_STEVAL-MKBOXPRO](https://github.com/stm32-hotspot/staiotcraft_sdatalog_steval-mkboxpro)
+  - STAIOTCRAFT_SDATALOG_RUST_STEVAL-MKBOXPRO available as a software package from [st.com](https://www.st.com)
+  - [STAIOTCRAFT_SDATALOG_NUCLEO-F401RE_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_sdatalog_nucleo-f401re_x-nucleo-iks5a1)
+  - [STAIOTCRAFT_SDATALOG_NUCLEO-U575ZI-Q_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_sdatalog_nucleo-u575zi-q_x-nucleo-iks5a1)
+  - [STAIOTCRAFT_SDATALOG_NUCLEO-H7A3ZI-Q_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_sdatalog_nucleo-h7a3zi-q_x-nucleo-iks5a1)
+
+- Inference firmware over USB/serial connectivity
+  - [STAIOTCRAFT_AI_Inertial_STEVAL-MKBOXPRO](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_steval-mkboxpro)
+  - [STAIOTCRAFT_AI_Inertial_STEVAL-STWINBX1](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_steval-stwinbx1)
+  - [STAIOTCRAFT_AI_Inertial_STEVAL-STWINKT1B](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_steval-stwinkt1b)
+  - [STAIOTCRAFT_AI_Inertial_NUCLEO-F401RE_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_nucleo-f401re_x-nucleo-iks5a1)
+  - [STAIOTCRAFT_AI_Inertial_NUCLEO-U575ZI-Q_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_nucleo-u575zi-q_x-nucleo-iks5a1)
+  - [STAIOTCRAFT_AI_Inertial_NUCLEO-H7A3ZI-Q_X-NUCLEO-IKS5A1](https://github.com/stm32-hotspot/staiotcraft_ai_inertial_nucleo-h7a3zi-q_x-nucleo-iks5a1)
+
+- Inference firmware over Bluetooth Low Energy (BLE) connectivity
+  - STAIOTCRAFT_AI_SSM_STEVAL-MKBOXPRO available within the [FP-SNS-STAIOTCFT](https://www.st.com/en/embedded-software/fp-sns-staiotcft.html) function pack for [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)
